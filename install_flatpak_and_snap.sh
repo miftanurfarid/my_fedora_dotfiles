@@ -11,7 +11,8 @@ flatpak install -y flathub us.zoom.Zoom
 flatpak install -y flathub io.github.shiftey.Desktop
 
 # install snap
-dnf install snapd
+dnf install -y snapd
+sleep 5m
 ln -s /var/lib/snapd/snap /snap
 snap install superproductivity
 snap install spotify

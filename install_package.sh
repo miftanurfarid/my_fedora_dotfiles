@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # dnf setup
-echo 'fastestmirror=true' | tee -a /etc/dnf/dnf.conf
-echo 'max_parallel_downloads=5' | tee -a /etc/dnf/dnf.conf
-echo 'deltarpm=true' | tee -a /etc/dnf/dnf.conf
+cat dnf.txt > /etc/dnf/dnf.conf
 
 # initial upgrade
 dnf upgrade -y --refresh
@@ -13,7 +11,7 @@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm
 dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Install All Package
-dnf install -y texlive-scheme-full lyx octave python3-spyder htop inkscape texstudio xournal xournalpp qpdfview-qt5 gimp texlive-IEEEtran libreoffice-Mendeley torbrowser-launcher axel neofetch kcm_wacomtablet vlc telegram-desktop rclone calibre gnome-tweaks unrar jupyter-notebook okular git-cola aria2 texlive-babel-bahasa texlive-lipsum texlive-extarrows btrfs-assistant transmission cabextract xorg-x11-font-utils redhat-lsb-core gstreamer1-plugin-openh264 mozilla-openh264 neovim vim steam texmaker pdftk touchegg gparted playonlinux
+dnf install -y texlive-scheme-full texlive-IEEEtran texlive-babel-bahasa texlive-lipsum texlive-extarrows lyx octave python3-spyder htop inkscape texstudio xournalpp qpdfview-qt5 gimp libreoffice-Mendeley torbrowser-launcher axel neofetch vlc telegram-desktop rclone calibre gnome-tweaks unrar jupyter-notebook okular btrfs-assistant transmission cabextract xorg-x11-font-utils redhat-lsb-core gstreamer1-plugin-openh264 mozilla-openh264 neovim vim steam pdftk gparted playonlinux
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
