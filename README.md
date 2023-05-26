@@ -7,3 +7,4 @@
 5. run `./install_flatpak_and_snap.sh` under root
 6. add gnome extension clipboard and tray
 7. run `./install_python_package.sh` under user
+8. run `./install_packettracer` under root
