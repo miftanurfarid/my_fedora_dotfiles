@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# dnf setup
-cat dnf.txt > /etc/dnf/dnf.conf
-
-# initial upgrade
-dnf upgrade -y --refresh
-
-# add rpmfusion
-rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
 # Install All Package
 dnf install -y texlive-scheme-full texlive-IEEEtran texlive-babel-bahasa texlive-lipsum texlive-extarrows lyx octave python3-spyder htop inkscape texstudio xournalpp qpdfview-qt5 gimp libreoffice-Mendeley torbrowser-launcher axel neofetch vlc telegram-desktop rclone calibre gnome-tweaks unrar jupyter-notebook okular btrfs-assistant transmission cabextract xorg-x11-font-utils redhat-lsb-core gstreamer1-plugin-openh264 mozilla-openh264 neovim vim steam pdftk gparted playonlinux
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
