@@ -5,8 +5,10 @@ dnf install -y texlive-scheme-full texlive-IEEEtran texlive-babel-bahasa texlive
 wget https://download.zotero.org/client/release/6.0.26/Zotero-6.0.26_linux-x86_64.tar.bz2
 tar -xvjf Zotero-6.0.26_linux-x86_64.tar.bz2 -C /opt/
 mv /opt/Zotero* /opt/zotero
+chmod +x /opt/zotero/set_launcher_icon 
 sh /opt/zotero/set_launcher_icon
 ln -s /opt/zotero/zotero.desktop /home/$(logname)/.local/share/applications/zotero.desktop
+rm Zotero-6.0.26_linux-x86_64*
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
@@ -20,5 +22,6 @@ rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 dnf install -y brave-browser
 dnf install -y https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 cd ttf-wps-fonts
-./install.sh
+chmod +x *.sh
+sh ./install.sh
 cd ..
