@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install All Package
-dnf install -y texlive-scheme-full texlive-IEEEtran texlive-babel-bahasa texlive-lipsum texlive-extarrows lyx octave python3-spyder htop inkscape texstudio xournalpp qpdfview-qt5 gimp libreoffice-Mendeley torbrowser-launcher axel neofetch vlc telegram-desktop rclone calibre gnome-tweaks unrar jupyter-notebook okular btrfs-assistant transmission cabextract xorg-x11-font-utils redhat-lsb-core gstreamer1-plugin-openh264 mozilla-openh264 neovim vim steam pdftk gparted bat exa fish playonlinux
+dnf install -y texlive-scheme-full texlive-IEEEtran texlive-babel-bahasa texlive-lipsum texlive-extarrows lyx octave python3-spyder htop inkscape texstudio xournalpp qpdfview-qt5 gimp libreoffice-Mendeley torbrowser-launcher axel neofetch vlc telegram-desktop rclone calibre gnome-tweaks unrar jupyter-notebook okular btrfs-assistant transmission cabextract xorg-x11-font-utils redhat-lsb-core gstreamer1-plugin-openh264 mozilla-openh264 neovim vim steam pdftk gparted bat exa fish trash-cli playonlinux global-ctags ack
 wget https://download.zotero.org/client/release/6.0.26/Zotero-6.0.26_linux-x86_64.tar.bz2
 tar -xvjf Zotero-6.0.26_linux-x86_64.tar.bz2 -C /opt/
 mv /opt/Zotero* /opt/zotero
@@ -25,3 +25,4 @@ cd ttf-wps-fonts
 chmod +x *.sh
 sh ./install.sh
 cd ..
+

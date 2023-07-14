@@ -9,3 +9,5 @@
 7. add gnome extension clipboard and tray
 8. run `./install_python_package.sh` under user
 9. run `./install_packettracer` under root
+10. run `./config_nvim.sh` under root
+

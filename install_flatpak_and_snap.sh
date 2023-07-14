@@ -16,3 +16,4 @@ sleep 5m
 ln -s /var/lib/snapd/snap /snap
 snap install superproductivity
 snap install spotify
+
